@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Versed ¬∑ Privacy</title>
+<meta name="description" content="Privacy policy for Versed, a daily verse journal for iPhone.">
+<style>
+:root {
+  --paper: #f3ece0;
+  --page: #fbf8f1;
+  --ink: #2b2622;
+  --muted: #7a6f66;
+  --rubric: #a8322d;
+  --rule: #e4d9c8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1c1916;
+    --page: #24201c;
+    --ink: #efe7da;
+    --muted: #a99d90;
+    --rubric: #d8645d;
+    --rule: #3a332c;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+main {
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 40px 32px 48px;
+  background: var(--page);
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 720px) {
+  main { margin: 0; border-radius: 0; padding: 32px 16px 40px; box-shadow: none; }
+}
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.brand { font-size: 34px; font-style: italic; color: var(--ink); text-decoration: none; }
+.lang button {
+  font: inherit; font-size: 14px; background: none; border: 1px solid var(--rule);
+  color: var(--muted); border-radius: 999px; padding: 2px 12px; cursor: pointer;
+}
+.lang button[aria-pressed="true"] { color: var(--rubric); border-color: var(--rubric); }
+.label {
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rubric);
+  margin: 36px 0 6px;
+}
+h1 { font-weight: normal; font-style: italic; font-size: 30px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-weight: normal; font-size: 21px; margin: 32px 0 6px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 20px; }
+a { color: var(--rubric); }
+.muted { color: var(--muted); font-size: 15px; }
+hr { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
+footer { margin-top: 36px; font-size: 14px; color: var(--muted); }
+footer a { color: var(--muted); margin-right: 14px; }
+section[lang]:not(.active) { display: none; }
+</style>
+<script>
+// Shows English by default; ?lang=tr or the T√ºrk√ße button switches to Turkish.
+(function () {
+  var param = new URLSearchParams(location.search).get("lang");
+  var lang = param === "tr" ? "tr" : "en";
+  function apply(l) {
+    document.documentElement.lang = l;
+    document.querySelectorAll("section[lang]").forEach(function (s) {
+      s.classList.toggle("active", s.getAttribute("lang") === l);
+    });
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false");
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.addEventListener("click", function () { apply(b.dataset.lang); });
+    });
+    apply(lang);
+  });
+})();
+</script>
+</head>
+<body>
+<main>
+  <header>
+    <a class="brand" href="../">versed.</a>
+    <div class="lang"><button data-lang="en">English</button> <button data-lang="tr">T√ºrk√ße</button></div>
+  </header>
+
+  <section lang="en">
+    <div class="label">Privacy</div>
+    <h1>Your journal stays on your phone.</h1>
+    <p class="muted">Last updated: October 5, 2026</p>
+
+    <p>Versed is a daily verse journal for iPhone, made by Enes Beyaz, an independent developer. This page explains, in plain words, what happens with your information. The short version: there is no account, no advertising, no tracking and no analytics. What you write and keep in Versed stays on your device.</p>
+
+    <h2>What stays on your device</h2>
+    <p>Everything you create in Versed is stored only on your iPhone: your pages, the photos and drawings you add, your gratitude notes, prayers, highlighted sentences, the feelings you choose in "How are you?", your answers to the first-day questions, and your reminder settings. We don't have a server that receives any of it, and we can't see it.</p>
+    <p>If your iPhone is backed up to iCloud or a computer, this information is included in that backup, under Apple's terms and your own settings. Deleting the app removes it from your phone.</p>
+
+    <h2>Camera and photos</h2>
+    <p>Versed asks for camera access only so you can take a photo and place it on your page. The photo is saved inside the app. Versed adds an image to your photo library only when you choose to save or share a page.</p>
+
+    <h2>Reminders</h2>
+    <p>Morning reminders are scheduled on your iPhone itself. No server sends them, and you can turn them off at any time in the app or in Settings.</p>
+
+    <h2>Purchases</h2>
+    <p>Versed+ and tips are bought through the App Store. Apple handles payment, and we never see your payment details. To know whether your Versed+ is active, the app uses RevenueCat, a service that manages subscriptions. RevenueCat receives your purchase history together with a random, anonymous identifier created by the app. It is not linked to your name, email or Apple ID on our side, and it is not used for tracking or advertising. You can read <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
+
+    <h2>New verses</h2>
+    <p>From time to time the app downloads a file of new daily verses from our website, which is hosted on GitHub Pages. This request contains no personal information. Like any website, GitHub may briefly record technical details such as your IP address; see <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+
+    <h2>Exporting your journal</h2>
+    <p>If you export your journal, Versed creates a file on your phone and opens the share sheet. Where it goes from there is entirely your choice.</p>
+
+    <h2>Children</h2>
+    <p>Versed doesn't knowingly collect personal information from anyone, including children.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, we'll update this page and the date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about your privacy? Write to <a href="mailto:beyaz.labs@gmail.com">beyaz.labs@gmail.com</a>.</p>
+  </section>
+
+  <section lang="tr">
+    <div class="label">Gizlilik</div>
+    <h1>Defterin telefonunda kalƒ±r.</h1>
+    <p class="muted">Son g√ºncelleme: 5 Ekim 2026</p>
+
+    <p>Versed, baƒüƒ±msƒ±z geli≈ütirici Enes Beyaz tarafƒ±ndan yapƒ±lmƒ±≈ü, iPhone i√ßin g√ºnl√ºk bir ayet defteridir. Bu sayfa, bilgilerinle ne olduƒüunu sade bir dille anlatƒ±r. Kƒ±sacasƒ±: hesap yok, reklam yok, takip yok, analitik yok. Versed'de yazdƒ±ƒüƒ±n ve sakladƒ±ƒüƒ±n her ≈üey cihazƒ±nda kalƒ±r.</p>
+
+    <h2>Cihazƒ±nda kalanlar</h2>
+    <p>Versed'de olu≈üturduƒüun her ≈üey yalnƒ±zca iPhone'unda saklanƒ±r: sayfalarƒ±n, eklediƒüin fotoƒüraflar ve √ßizimler, ≈ü√ºk√ºr notlarƒ±n, dualarƒ±n, altƒ±nƒ± √ßizdiƒüin c√ºmleler, "Nasƒ±lsƒ±n?" b√∂l√ºm√ºnde se√ßtiƒüin hisler, ilk g√ºn sorularƒ±na verdiƒüin cevaplar ve hatƒ±rlatƒ±cƒ± ayarlarƒ±n. Bunlarƒ± alan bir sunucumuz yok ve biz g√∂remeyiz.</p>
+    <p>iPhone'un iCloud'a ya da bir bilgisayara yedekleniyorsa, bu bilgiler Apple'ƒ±n ko≈üullarƒ± ve senin ayarlarƒ±n √ßer√ßevesinde o yedeƒüe dahil olur. Uygulamayƒ± silmek bunlarƒ± telefonundan kaldƒ±rƒ±r.</p>
+
+    <h2>Kamera ve fotoƒüraflar</h2>
+    <p>Versed kamera iznini yalnƒ±zca fotoƒüraf √ßekip sayfana yapƒ±≈ütƒ±rabilmen i√ßin ister. Fotoƒüraf uygulamanƒ±n i√ßinde saklanƒ±r. Versed, fotoƒüraf ar≈üivine yalnƒ±zca bir sayfayƒ± kaydetmeyi ya da payla≈ümayƒ± se√ßtiƒüinde resim ekler.</p>
+
+    <h2>Hatƒ±rlatƒ±cƒ±lar</h2>
+    <p>Sabah hatƒ±rlatƒ±cƒ±larƒ± iPhone'unun kendisinde planlanƒ±r. Hi√ßbir sunucu g√∂ndermez; uygulamadan ya da Ayarlar'dan istediƒüin zaman kapatabilirsin.</p>
+
+    <h2>Satƒ±n almalar</h2>
+    <p>Versed+ ve bah≈üi≈üler App Store √ºzerinden satƒ±n alƒ±nƒ±r. √ñdemeyi Apple yapar, √∂deme bilgilerini biz hi√ßbir zaman g√∂rmeyiz. Versed+'ƒ±n etkin olup olmadƒ±ƒüƒ±nƒ± bilmek i√ßin uygulama, abonelikleri y√∂neten bir hizmet olan RevenueCat'i kullanƒ±r. RevenueCat, satƒ±n alma ge√ßmi≈üini uygulamanƒ±n olu≈üturduƒüu rastgele, anonim bir kimlikle birlikte alƒ±r. Bu kimlik bizim tarafƒ±mƒ±zda adƒ±na, e-postana ya da Apple kimliƒüine baƒülanmaz; takip ya da reklam i√ßin kullanƒ±lmaz. <a href="https://www.revenuecat.com/privacy">RevenueCat'in gizlilik politikasƒ±nƒ±</a> okuyabilirsin.</p>
+
+    <h2>Yeni ayetler</h2>
+    <p>Uygulama zaman zaman, GitHub Pages √ºzerinde barƒ±ndƒ±rƒ±lan sitemizden yeni g√ºnl√ºk ayetlerin bulunduƒüu bir dosya indirir. Bu istek hi√ßbir ki≈üisel bilgi i√ßermez. Her web sitesinde olduƒüu gibi GitHub, IP adresin gibi teknik ayrƒ±ntƒ±larƒ± kƒ±sa s√ºreliƒüine kaydedebilir; bkz. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub gizlilik bildirimi</a>.</p>
+
+    <h2>Defterini dƒ±≈üa aktarmak</h2>
+    <p>Defterini dƒ±≈üa aktarƒ±rsan Versed telefonunda bir dosya olu≈üturur ve payla≈üƒ±m ekranƒ±nƒ± a√ßar. Dosyanƒ±n oradan nereye gideceƒüi tamamen senin se√ßimin.</p>
+
+    <h2>√áocuklar</h2>
+    <p>Versed, √ßocuklar dahil hi√ß kimseden bilerek ki≈üisel bilgi toplamaz.</p>
+
+    <h2>Deƒüi≈üiklikler</h2>
+    <p>Bu politika deƒüi≈üirse bu sayfayƒ± ve √ºstteki tarihi g√ºncelleriz.</p>
+
+    <h2>ƒ∞leti≈üim</h2>
+    <p>Gizliliƒüinle ilgili sorularƒ±n i√ßin <a href="mailto:beyaz.labs@gmail.com">beyaz.labs@gmail.com</a> adresine yazabilirsin.</p>
+  </section>
+
+  <footer><a href="../">Versed</a><a href="../support/">Support ¬∑ Destek</a></footer>
+</main>
+</body>
+</html>
