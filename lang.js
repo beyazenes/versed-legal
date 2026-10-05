@@ -1,7 +1,7 @@
-// Shows the Turkish or English text: ?lang=tr / ?lang=en, else the browser's language.
+// Shows English by default; ?lang=tr or the Türkçe button switches to Turkish.
 (function () {
   var param = new URLSearchParams(location.search).get("lang");
-  var lang = param || ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+  var lang = param === "tr" ? "tr" : "en";
   function apply(l) {
     document.documentElement.lang = l;
     document.querySelectorAll("section[lang]").forEach(function (s) {
