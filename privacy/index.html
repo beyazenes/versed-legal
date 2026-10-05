@@ -3,98 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Versed ¬∑ Privacy</title>
+<title>Versed · Privacy</title>
 <meta name="description" content="Privacy policy for Versed, a daily verse journal for iPhone.">
-<style>
-:root {
-  --paper: #f3ece0;
-  --page: #fbf8f1;
-  --ink: #2b2622;
-  --muted: #7a6f66;
-  --rubric: #a8322d;
-  --rule: #e4d9c8;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #1c1916;
-    --page: #24201c;
-    --ink: #efe7da;
-    --muted: #a99d90;
-    --rubric: #d8645d;
-    --rule: #3a332c;
-  }
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 18px;
-  line-height: 1.6;
-}
-main {
-  max-width: 680px;
-  margin: 40px auto;
-  padding: 40px 32px 48px;
-  background: var(--page);
-  border-radius: 6px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-}
-@media (max-width: 720px) {
-  main { margin: 0; border-radius: 0; padding: 32px 16px 40px; box-shadow: none; }
-}
-header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
-.brand { font-size: 34px; font-style: italic; color: var(--ink); text-decoration: none; }
-.lang button {
-  font: inherit; font-size: 14px; background: none; border: 1px solid var(--rule);
-  color: var(--muted); border-radius: 999px; padding: 2px 12px; cursor: pointer;
-}
-.lang button[aria-pressed="true"] { color: var(--rubric); border-color: var(--rubric); }
-.label {
-  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rubric);
-  margin: 36px 0 6px;
-}
-h1 { font-weight: normal; font-style: italic; font-size: 30px; line-height: 1.25; margin: 0 0 8px; }
-h2 { font-weight: normal; font-size: 21px; margin: 32px 0 6px; }
-p, li { margin: 0 0 12px; }
-ul { padding-left: 20px; }
-a { color: var(--rubric); }
-.muted { color: var(--muted); font-size: 15px; }
-hr { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
-footer { margin-top: 36px; font-size: 14px; color: var(--muted); }
-footer a { color: var(--muted); margin-right: 14px; }
-section[lang]:not(.active) { display: none; }
-</style>
-<script>
-// Shows English by default; ?lang=tr or the T√ºrk√ße button switches to Turkish.
-(function () {
-  var param = new URLSearchParams(location.search).get("lang");
-  var lang = param === "tr" ? "tr" : "en";
-  function apply(l) {
-    document.documentElement.lang = l;
-    document.querySelectorAll("section[lang]").forEach(function (s) {
-      s.classList.toggle("active", s.getAttribute("lang") === l);
-    });
-    document.querySelectorAll(".lang button").forEach(function (b) {
-      b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false");
-    });
-  }
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".lang button").forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.dataset.lang); });
-    });
-    apply(lang);
-  });
-})();
-</script>
+<link rel="stylesheet" href="../style.css">
+<script src="../lang.js"></script>
 </head>
 <body>
 <main>
   <header>
     <a class="brand" href="../">versed.</a>
-    <div class="lang"><button data-lang="en">English</button> <button data-lang="tr">T√ºrk√ße</button></div>
+    <div class="lang"><button data-lang="en">English</button> <button data-lang="tr">Türkçe</button></div>
   </header>
 
   <section lang="en">
@@ -130,46 +48,46 @@ section[lang]:not(.active) { display: none; }
     <p>If this policy changes, we'll update this page and the date at the top.</p>
 
     <h2>Contact</h2>
-    <p>Questions about your privacy? Write to <a href="mailto:beyaz.labs@gmail.com">beyaz.labs@gmail.com</a>.</p>
+    <p>Questions about your privacy? Write to <a href="mailto:__EMAIL__">__EMAIL__</a>.</p>
   </section>
 
   <section lang="tr">
     <div class="label">Gizlilik</div>
-    <h1>Defterin telefonunda kalƒ±r.</h1>
-    <p class="muted">Son g√ºncelleme: 5 Ekim 2026</p>
+    <h1>Defterin telefonunda kalır.</h1>
+    <p class="muted">Son güncelleme: 5 Ekim 2026</p>
 
-    <p>Versed, baƒüƒ±msƒ±z geli≈ütirici Enes Beyaz tarafƒ±ndan yapƒ±lmƒ±≈ü, iPhone i√ßin g√ºnl√ºk bir ayet defteridir. Bu sayfa, bilgilerinle ne olduƒüunu sade bir dille anlatƒ±r. Kƒ±sacasƒ±: hesap yok, reklam yok, takip yok, analitik yok. Versed'de yazdƒ±ƒüƒ±n ve sakladƒ±ƒüƒ±n her ≈üey cihazƒ±nda kalƒ±r.</p>
+    <p>Versed, bağımsız geliştirici Enes Beyaz tarafından yapılmış, iPhone için günlük bir ayet defteridir. Bu sayfa, bilgilerinle ne olduğunu sade bir dille anlatır. Kısacası: hesap yok, reklam yok, takip yok, analitik yok. Versed'de yazdığın ve sakladığın her şey cihazında kalır.</p>
 
-    <h2>Cihazƒ±nda kalanlar</h2>
-    <p>Versed'de olu≈üturduƒüun her ≈üey yalnƒ±zca iPhone'unda saklanƒ±r: sayfalarƒ±n, eklediƒüin fotoƒüraflar ve √ßizimler, ≈ü√ºk√ºr notlarƒ±n, dualarƒ±n, altƒ±nƒ± √ßizdiƒüin c√ºmleler, "Nasƒ±lsƒ±n?" b√∂l√ºm√ºnde se√ßtiƒüin hisler, ilk g√ºn sorularƒ±na verdiƒüin cevaplar ve hatƒ±rlatƒ±cƒ± ayarlarƒ±n. Bunlarƒ± alan bir sunucumuz yok ve biz g√∂remeyiz.</p>
-    <p>iPhone'un iCloud'a ya da bir bilgisayara yedekleniyorsa, bu bilgiler Apple'ƒ±n ko≈üullarƒ± ve senin ayarlarƒ±n √ßer√ßevesinde o yedeƒüe dahil olur. Uygulamayƒ± silmek bunlarƒ± telefonundan kaldƒ±rƒ±r.</p>
+    <h2>Cihazında kalanlar</h2>
+    <p>Versed'de oluşturduğun her şey yalnızca iPhone'unda saklanır: sayfaların, eklediğin fotoğraflar ve çizimler, şükür notların, duaların, altını çizdiğin cümleler, "Nasılsın?" bölümünde seçtiğin hisler, ilk gün sorularına verdiğin cevaplar ve hatırlatıcı ayarların. Bunları alan bir sunucumuz yok ve biz göremeyiz.</p>
+    <p>iPhone'un iCloud'a ya da bir bilgisayara yedekleniyorsa, bu bilgiler Apple'ın koşulları ve senin ayarların çerçevesinde o yedeğe dahil olur. Uygulamayı silmek bunları telefonundan kaldırır.</p>
 
-    <h2>Kamera ve fotoƒüraflar</h2>
-    <p>Versed kamera iznini yalnƒ±zca fotoƒüraf √ßekip sayfana yapƒ±≈ütƒ±rabilmen i√ßin ister. Fotoƒüraf uygulamanƒ±n i√ßinde saklanƒ±r. Versed, fotoƒüraf ar≈üivine yalnƒ±zca bir sayfayƒ± kaydetmeyi ya da payla≈ümayƒ± se√ßtiƒüinde resim ekler.</p>
+    <h2>Kamera ve fotoğraflar</h2>
+    <p>Versed kamera iznini yalnızca fotoğraf çekip sayfana yapıştırabilmen için ister. Fotoğraf uygulamanın içinde saklanır. Versed, fotoğraf arşivine yalnızca bir sayfayı kaydetmeyi ya da paylaşmayı seçtiğinde resim ekler.</p>
 
-    <h2>Hatƒ±rlatƒ±cƒ±lar</h2>
-    <p>Sabah hatƒ±rlatƒ±cƒ±larƒ± iPhone'unun kendisinde planlanƒ±r. Hi√ßbir sunucu g√∂ndermez; uygulamadan ya da Ayarlar'dan istediƒüin zaman kapatabilirsin.</p>
+    <h2>Hatırlatıcılar</h2>
+    <p>Sabah hatırlatıcıları iPhone'unun kendisinde planlanır. Hiçbir sunucu göndermez; uygulamadan ya da Ayarlar'dan istediğin zaman kapatabilirsin.</p>
 
-    <h2>Satƒ±n almalar</h2>
-    <p>Versed+ ve bah≈üi≈üler App Store √ºzerinden satƒ±n alƒ±nƒ±r. √ñdemeyi Apple yapar, √∂deme bilgilerini biz hi√ßbir zaman g√∂rmeyiz. Versed+'ƒ±n etkin olup olmadƒ±ƒüƒ±nƒ± bilmek i√ßin uygulama, abonelikleri y√∂neten bir hizmet olan RevenueCat'i kullanƒ±r. RevenueCat, satƒ±n alma ge√ßmi≈üini uygulamanƒ±n olu≈üturduƒüu rastgele, anonim bir kimlikle birlikte alƒ±r. Bu kimlik bizim tarafƒ±mƒ±zda adƒ±na, e-postana ya da Apple kimliƒüine baƒülanmaz; takip ya da reklam i√ßin kullanƒ±lmaz. <a href="https://www.revenuecat.com/privacy">RevenueCat'in gizlilik politikasƒ±nƒ±</a> okuyabilirsin.</p>
+    <h2>Satın almalar</h2>
+    <p>Versed+ ve bahşişler App Store üzerinden satın alınır. Ödemeyi Apple yapar, ödeme bilgilerini biz hiçbir zaman görmeyiz. Versed+'ın etkin olup olmadığını bilmek için uygulama, abonelikleri yöneten bir hizmet olan RevenueCat'i kullanır. RevenueCat, satın alma geçmişini uygulamanın oluşturduğu rastgele, anonim bir kimlikle birlikte alır. Bu kimlik bizim tarafımızda adına, e-postana ya da Apple kimliğine bağlanmaz; takip ya da reklam için kullanılmaz. <a href="https://www.revenuecat.com/privacy">RevenueCat'in gizlilik politikasını</a> okuyabilirsin.</p>
 
     <h2>Yeni ayetler</h2>
-    <p>Uygulama zaman zaman, GitHub Pages √ºzerinde barƒ±ndƒ±rƒ±lan sitemizden yeni g√ºnl√ºk ayetlerin bulunduƒüu bir dosya indirir. Bu istek hi√ßbir ki≈üisel bilgi i√ßermez. Her web sitesinde olduƒüu gibi GitHub, IP adresin gibi teknik ayrƒ±ntƒ±larƒ± kƒ±sa s√ºreliƒüine kaydedebilir; bkz. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub gizlilik bildirimi</a>.</p>
+    <p>Uygulama zaman zaman, GitHub Pages üzerinde barındırılan sitemizden yeni günlük ayetlerin bulunduğu bir dosya indirir. Bu istek hiçbir kişisel bilgi içermez. Her web sitesinde olduğu gibi GitHub, IP adresin gibi teknik ayrıntıları kısa süreliğine kaydedebilir; bkz. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub gizlilik bildirimi</a>.</p>
 
-    <h2>Defterini dƒ±≈üa aktarmak</h2>
-    <p>Defterini dƒ±≈üa aktarƒ±rsan Versed telefonunda bir dosya olu≈üturur ve payla≈üƒ±m ekranƒ±nƒ± a√ßar. Dosyanƒ±n oradan nereye gideceƒüi tamamen senin se√ßimin.</p>
+    <h2>Defterini dışa aktarmak</h2>
+    <p>Defterini dışa aktarırsan Versed telefonunda bir dosya oluşturur ve paylaşım ekranını açar. Dosyanın oradan nereye gideceği tamamen senin seçimin.</p>
 
-    <h2>√áocuklar</h2>
-    <p>Versed, √ßocuklar dahil hi√ß kimseden bilerek ki≈üisel bilgi toplamaz.</p>
+    <h2>Çocuklar</h2>
+    <p>Versed, çocuklar dahil hiç kimseden bilerek kişisel bilgi toplamaz.</p>
 
-    <h2>Deƒüi≈üiklikler</h2>
-    <p>Bu politika deƒüi≈üirse bu sayfayƒ± ve √ºstteki tarihi g√ºncelleriz.</p>
+    <h2>Değişiklikler</h2>
+    <p>Bu politika değişirse bu sayfayı ve üstteki tarihi güncelleriz.</p>
 
-    <h2>ƒ∞leti≈üim</h2>
-    <p>Gizliliƒüinle ilgili sorularƒ±n i√ßin <a href="mailto:beyaz.labs@gmail.com">beyaz.labs@gmail.com</a> adresine yazabilirsin.</p>
+    <h2>İletişim</h2>
+    <p>Gizliliğinle ilgili soruların için <a href="mailto:__EMAIL__">__EMAIL__</a> adresine yazabilirsin.</p>
   </section>
 
-  <footer><a href="../">Versed</a><a href="../support/">Support ¬∑ Destek</a></footer>
+  <footer><a href="../">Versed</a><a href="../support/">Support · Destek</a></footer>
 </main>
 </body>
 </html>
