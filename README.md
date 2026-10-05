@@ -1,4 +1,4 @@
-# versed-site
+# versed-legal
 
 Public pages for the Versed iOS app, served by GitHub Pages:
 
